@@ -24,7 +24,7 @@ public class BookController {
 	public String saveBook(@RequestBody Book book) {
 		System.out.println("Adding the book.......");
 		repository.save(book);
-		return "Added book with id : " + book.getId();
+		return "Added book with id : " + book.getId()+"\nName : "+book.getBookName()+"\nAuthor : "+book.getAuthorName();
 	}
 
 	@GetMapping("/findAllBooks")
